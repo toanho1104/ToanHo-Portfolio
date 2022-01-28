@@ -1,7 +1,26 @@
 module.exports = {
-  bracketSpacing: false,
-  jsxBracketSameLine: true,
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
   singleQuote: true,
+  tabWidth: 2,
   trailingComma: 'all',
-  arrowParens: 'avoid',
+  importOrder: [
+    '^react$',
+    '^react-native$',
+    '^(?!@graphql$|@graphql/(.*)$' +
+      '|@contexts$|./contexts$|@/contexts(.*)$' +
+      '|@screens$|@screens/(.*)$' +
+      '|@components/(.*)$|@common/(.*)$' +
+      '|@utils/(.*)$|@types/(.*)$|@styles$|@navigation/(.*)$|@services/(.*)$|@constants/(.*)$|@hooks/(.*)$|@env$' +
+      '|./(.*)$|../(.*)$' +
+      '|@assets/(.*)$|@assets$)',
+    '^(@graphql$|@graphql/(.*)$)',
+    '^(@contexts/(.*)$|./contexts$)',
+    '^@screens/(.*)$',
+    '^(@common/(.*)$|@components/(.*)$|./components$)',
+    '^(@utils/(.*)$|@types/(.*)$|@styles$|@navigation/(.*)$|@services/(.*)$|@constants/(.*)$|@hooks/(.*)$|@env$)',
+    '^(./(.*)$|../(.*)$)',
+    '^(@assets/(.*)$|@assets$)',
+  ],
+  importOrderSeparation: true,
 };
